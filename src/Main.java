@@ -15,7 +15,12 @@ public class Main {
         double sum = 0.0;
 
         //Declaring an array that will contain the numbers
-        ArrayList<Double> list = new ArrayList<>();
+        //ArrayList<Double> list = new ArrayList<>();
+
+        Collection<Double> list = new ArrayList<>();
+
+
+
         //looping through the input
         System.out.println("The numbers are:");
         while (input.hasNextDouble()) {
@@ -41,8 +46,11 @@ public class Main {
         double standardDeviation = 0.0;
         int n = list.size();
         for (int i = 0; i < n; i++) {
-            standardDeviation += Math.pow(list.get(i) - mean, 2);
+            standardDeviation += Math.pow(((ArrayList<Double>) list).get(i) - mean, 2);
+
         }
+
+
 
         standardDeviation = Math.sqrt(standardDeviation / n);
         System.out.println("The Standard Deviation is: "+standardDeviation +"\nThanks!");
