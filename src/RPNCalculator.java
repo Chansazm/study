@@ -10,7 +10,7 @@ public class RPNCalculator {
         while (isRunning) {
             System.out.print("Enter a number, operator or ? for help: ");
             String input = scanner.nextLine();
-
+//
             try {
                 int number = Integer.parseInt(input);
                 stack.push(number);
